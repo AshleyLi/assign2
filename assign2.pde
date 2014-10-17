@@ -31,7 +31,7 @@ PImage imgWinFrog, imgLoseFrog;
 
 void setup(){
   gametimes = 0;
-  println("gametimes = " + gametimes);
+  //println("gametimes = " + gametimes);
   carSpeed1 = random(0,5);
   carSpeed2 = random(0,5);
   carSpeed3 = random(0,5);
