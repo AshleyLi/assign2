@@ -155,6 +155,7 @@ void draw(){
            currentTime = millis();
            image(imgDeadFrog, frogX, frogY);
             life--;
+            
             gameState = FROG_DIE;
          }
          // car3 hitTest
@@ -171,7 +172,9 @@ void draw(){
             life--;
             gameState = FROG_DIE;
          }
-         
+         if(life == 0){
+            gameState = GAME_LOSE;
+            }
         break;
     case GAME_WIN:
         background(0);
@@ -228,7 +231,7 @@ void keyPressed() {
           break;
       }
     }
-    if(key==ENTER /*still needs something*/){
+    if(key==ENTER && gameState != GAME_RUN){
       gameState = GAME_RUN;
       life=3;
       frogX = frogInitX;
